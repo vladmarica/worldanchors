@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "worldanchors:block/ender_anchor",
+    "down": "worldanchors:block/ender_anchor",
+    "up": "worldanchors:block/ender_anchor",
+    "east": "worldanchors:block/ender_anchor",
+    "west": "worldanchors:block/ender_anchor",
+    "north": "worldanchors:block/ender_anchor",
+    "south": "worldanchors:block/ender_anchor"
+  }
+}

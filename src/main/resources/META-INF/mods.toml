@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+issueTrackerURL="https://github.com/vladmarica/worldanchors/issues"
+
+[[mods]]
+modId="worldanchors"
+# The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
+# ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
+# see the associated build.gradle script for how to populate this completely automatically during a build
+version="${file.jarVersion}"
+displayName="World Anchors"
+logoFile="worldanchors.png"
+credits="Credit to CovertJaguar, developer of Railcraft, for the inspiration"
+authors="Quintinity"
+description='''
+Adds simple and balanced chunk loaders
+'''
+
+[[dependencies.worldanchors]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.worldanchors]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

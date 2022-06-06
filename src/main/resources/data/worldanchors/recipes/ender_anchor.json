@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "eoe",
+    "obo",
+    "eoe"
+  ],
+  "key":
+  {
+    "o":
+    {
+      "item": "minecraft:obsidian"
+    },
+    "e":
+    {
+      "item": "minecraft:ender_eye"
+    },
+    "b":
+    {
+      "item": "minecraft:emerald_block"
+    }
+  },
+  "result":
+  {
+    "item": "worldanchors:ender_anchor"
+  }
+}
