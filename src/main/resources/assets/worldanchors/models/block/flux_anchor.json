@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "worldanchors:block/flux_anchor",
+    "down": "worldanchors:block/flux_anchor_bottom",
+    "up": "worldanchors:block/flux_anchor_top",
+    "east": "worldanchors:block/flux_anchor_front",
+    "west": "worldanchors:block/flux_anchor_side",
+    "north": "worldanchors:block/flux_anchor_side",
+    "south": "worldanchors:block/flux_anchor_side"
+  }
+}

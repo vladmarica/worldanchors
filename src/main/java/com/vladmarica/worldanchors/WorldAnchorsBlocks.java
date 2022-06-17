@@ -2,6 +2,7 @@ package com.vladmarica.worldanchors;
 
 import com.vladmarica.worldanchors.block.AbstractWorldAnchorBlock;
 import com.vladmarica.worldanchors.block.EnderWorldAnchorBlock;
+import com.vladmarica.worldanchors.block.FluxWorldAnchorBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,17 +16,23 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(WorldAnchorsMod.MODID)
 public class WorldAnchorsBlocks {
   private static final String ENDER_WORLD_ANCHOR_NAME = "ender_anchor";
+  private static final String FLUX_WORLD_ANCHOR_NAME = "flux_anchor";
   private static final Item.Properties ITEM_PROPERTIES =
       new Item.Properties().tab(ItemGroup.TAB_MISC);
 
   @ObjectHolder(ENDER_WORLD_ANCHOR_NAME)
   public static AbstractWorldAnchorBlock ENDER_WORLD_ANCHOR;
 
+  @ObjectHolder(FLUX_WORLD_ANCHOR_NAME)
+  public static AbstractWorldAnchorBlock FLUX_WORLD_ANCHOR;
+
   @SubscribeEvent
   public static void onBlockRegistration(RegistryEvent.Register<Block> event) {
     event
         .getRegistry()
-        .registerAll(new EnderWorldAnchorBlock().setRegistryName(ENDER_WORLD_ANCHOR_NAME));
+        .registerAll(
+            new EnderWorldAnchorBlock().setRegistryName(ENDER_WORLD_ANCHOR_NAME),
+            new FluxWorldAnchorBlock().setRegistryName(FLUX_WORLD_ANCHOR_NAME));
   }
 
   @SubscribeEvent
@@ -34,6 +41,8 @@ public class WorldAnchorsBlocks {
         .getRegistry()
         .registerAll(
             new BlockItem(ENDER_WORLD_ANCHOR, ITEM_PROPERTIES)
-                .setRegistryName(ENDER_WORLD_ANCHOR_NAME));
+                .setRegistryName(ENDER_WORLD_ANCHOR_NAME),
+            new BlockItem(FLUX_WORLD_ANCHOR, ITEM_PROPERTIES)
+                .setRegistryName(FLUX_WORLD_ANCHOR_NAME));
   }
 }

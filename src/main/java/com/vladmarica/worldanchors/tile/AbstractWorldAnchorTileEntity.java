@@ -5,7 +5,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
-import net.minecraftforge.event.world.BlockEvent;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -59,6 +58,4 @@ public abstract class AbstractWorldAnchorTileEntity extends TileEntity {
   public UUID getOwner() {
     return owner;
   }
-
-  BlockEvent.BreakEvent
 }
