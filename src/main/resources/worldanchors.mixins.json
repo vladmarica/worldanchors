@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "com.vladmarica.worldanchors.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "worldanchors.refmap.json",
+  "mixins": [
+    "TicketOwnerMixin"
+  ],
+  "minVersion": "0.8",
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
