@@ -33,7 +33,7 @@ public class WorldAnchorsTileEntities {
 
     registry.register(
         TileEntityType.Builder.of(
-                FluxWorldAnchorTileEntity::new, WorldAnchorsBlocks.ENDER_WORLD_ANCHOR)
+                FluxWorldAnchorTileEntity::new, WorldAnchorsBlocks.FLUX_WORLD_ANCHOR)
             .build(null)
             .setRegistryName(FLUX_ANCHOR_NAME));
   }

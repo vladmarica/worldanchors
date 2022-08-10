@@ -31,7 +31,12 @@ public abstract class AbstractWorldAnchorBlock extends Block {
   }
 
   @Override
-  public void setPlacedBy(World world, BlockPos pos, BlockState state, @Nullable LivingEntity entity, ItemStack itemStack) {
+  public void setPlacedBy(
+      World world,
+      BlockPos pos,
+      BlockState state,
+      @Nullable LivingEntity entity,
+      ItemStack itemStack) {
     super.setPlacedBy(world, pos, state, entity, itemStack);
 
     if (world.isClientSide) {
@@ -39,10 +44,11 @@ public abstract class AbstractWorldAnchorBlock extends Block {
     }
 
     if (entity instanceof PlayerEntity) {
-      AbstractWorldAnchorTileEntity tileEntity = (AbstractWorldAnchorTileEntity) world.getBlockEntity(pos);
+      AbstractWorldAnchorTileEntity tileEntity =
+          (AbstractWorldAnchorTileEntity) world.getBlockEntity(pos);
       tileEntity.setOwner(((PlayerEntity) entity).getGameProfile());
     } else {
-      LOGGER.warn("World anchor placed by non-player at %s", pos);
+      LOGGER.warn("World anchor placed by non-player at {}", pos);
     }
   }
 

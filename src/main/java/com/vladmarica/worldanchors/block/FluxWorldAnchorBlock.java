@@ -1,9 +1,8 @@
 package com.vladmarica.worldanchors.block;
 
-import com.vladmarica.worldanchors.tile.EnderWorldAnchorTileEntity;
+import com.vladmarica.worldanchors.tile.FluxWorldAnchorTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.Property;
 import net.minecraft.state.StateContainer;
@@ -13,7 +12,12 @@ import net.minecraft.world.IBlockReader;
 import javax.annotation.Nullable;
 
 public class FluxWorldAnchorBlock extends AbstractWorldAnchorBlock {
-  private static final Property<Boolean> PROPERTY_ACTIVE = BooleanProperty.create("active");
+  public static final Property<Boolean> PROPERTY_ACTIVE = BooleanProperty.create("active");
+
+  public FluxWorldAnchorBlock() {
+    super();
+    registerDefaultState(getStateDefinition().any().setValue(PROPERTY_ACTIVE, false));
+  }
 
   @Override
   protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
@@ -22,13 +26,7 @@ public class FluxWorldAnchorBlock extends AbstractWorldAnchorBlock {
 
   @Nullable
   @Override
-  public BlockState getStateForPlacement(BlockItemUseContext context) {
-    return super.getStateForPlacement(context).setValue(PROPERTY_ACTIVE, true);
-  }
-
-  @Nullable
-  @Override
   public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-    return new EnderWorldAnchorTileEntity();
+    return new FluxWorldAnchorTileEntity();
   }
 }

@@ -3,7 +3,7 @@
   "textures": {
     "particle": "worldanchors:block/ender_anchor",
     "down": "worldanchors:block/ender_anchor",
-    "up": "worldanchors:block/ender_anchor",
+    "up": "worldanchors:block/ender_anchor_top",
     "east": "worldanchors:block/ender_anchor",
     "west": "worldanchors:block/ender_anchor",
     "north": "worldanchors:block/ender_anchor",

@@ -1,7 +1,7 @@
 {
   "parent": "block/cube",
   "textures": {
-    "particle": "worldanchors:block/flux_anchor",
+    "particle": "worldanchors:block/flux_anchor_side",
     "down": "worldanchors:block/flux_anchor_bottom",
     "up": "worldanchors:block/flux_anchor_top",
     "east": "worldanchors:block/flux_anchor_front",
